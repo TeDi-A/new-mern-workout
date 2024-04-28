@@ -9,7 +9,7 @@ const workoutRoutes = require('./routes/workouts')
 app.use(cors(
     {
     // origin: ['http://localhost:4000/api/workouts'],
-    origin: ['https://deploy-new-mern-app.vercel.app/'],
+    origin: ['https://deploy-new-mern-app-backend.vercel.app/'],
     methods: ['POST', 'GET'],
     credentials: true
     }
