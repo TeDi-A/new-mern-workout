@@ -1,17 +1,20 @@
 require('dotenv').config()
 const express = require('express')
-
+const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
 
-const cors = require('cors')
-app.use(cors())
 
-let corsOptions = {
-    origin: ['http://localhost:4000/api/workouts'],
-}
-
+app.use(cors(
+    {
+    // origin: ['http://localhost:4000/api/workouts'],
+    origin: ['https://deploy-new-mern-app.vercel.app/'],
+    methods: ['POST', 'GET'],
+    credentials: true
+    }
+));
+ 
 //Middleware 
 app.use(express.json())
 app.use(cors(corsOptions))
