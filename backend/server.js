@@ -17,7 +17,7 @@ app.use(cors(
 //Middleware 
 app.use(express.json())
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(mongodb+srv://TeDi-A:raiden74739@mernpractice.oogylav.mongodb.net/?retryWrites=true&w=majority)
 
 app.get('/', (req, res) => {
     res.json("Welcome")
