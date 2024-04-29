@@ -8,7 +8,7 @@ const workoutRoutes = require('./routes/workouts')
 
 app.use(cors(
     {
-    origin: ['https://new-mern-app-backend.vercel.app/'],
+    origin: ['https://new-mern-workout-backend.vercel.app/'],
     methods: ['POST', 'GET'],
     credentials: true
     }
