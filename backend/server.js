@@ -17,13 +17,13 @@ app.use(cors(
 //Middleware 
 app.use(express.json())
 
+mongoose.connect(process.env.MONGO_URI)
+
 app.get('/', (req, res) => {
     res.json("Welcome")
 })
 
 app.use('/api/workouts', workoutRoutes)
-
-mongoose.connect(process.env.MONGO_URI)
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
