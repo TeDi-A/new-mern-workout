@@ -28,4 +28,9 @@ app.get('/', (req, res) => {
 app.use('/api/workouts', workoutRoutes)
 
 mongoose.connect(process.env.MONGO_URI)
+
 const PORT = process.env.PORT
+app.listen(PORT, () => {
+            console.log('Listening on port ' + PORT)
+        })
+
